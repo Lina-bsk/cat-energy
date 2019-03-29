@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Lina Zhabska](https://up.htmlacademy.ru/adaptive/16/user/660549).
-* Наставник: `Неизвестно`.
+* Наставник: `Без наставника`.
 
 ---
 
