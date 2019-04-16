@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <header class="header">
+    <a class="logo">
+      <img class="logo__img" src="" alt="логотип Кэт энерджи">
+    </a>
+    <nav class="menu">
+      <button class="menu__button" type="button"></button>
+      <a class="menu__item">Главная</a>
+      <a class="menu__item" href="catalog.html">Каталог продукции</a>
+      <a class="menu__item" href="form.html">Подбор программы</a>
+    </nav>
+  </header>
+  <main class="main">
+    <h1 class="main__title">Подбор программы</h1>
+    <p class="main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <form class="form" method="post" action="https://echo.htmlacademy.ru">
+      <fieldset class="form__fieldset">
+        <label class="form__label">Имя:*<input type="text" name="name" placeholder="Барсик" required></label>
+        <label class="form__label">Вес (кг):*<input type="text" name="weight" placeholder="7" required></label>
+        <label class="form__label">Возраст (лет):<input type="text" name="age" placeholder="7"></label>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <label class="form__label"><input class="visually-hidden" type="radio" name="program"><span class="form__radio-name">Похудение</span></label>
+        <label class="form__label"><input class="visually-hidden" type="radio" name="program"><span class="form__radio-name">Набор массы</span></label>
+        <label class="form__label"><input class="visually-hidden" type="radio" name="program"><span class="form__radio-name">Не знаю (нужен ваш совет)</span></label>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__fieldset-name">Контактные данные (владельца кота)</legend>
+        <label class="form__label">e-mail:*<input type="email" name="email" placeholder="Kuklachev@gmail.com" required></label>
+        <label class="form__label">Телефон:*<input type="number" name="phone" placeholder="8 (960) 900-60-90" required></label>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__fieldset-name">Комментарий</legend>
+        <textarea class="form__comment" rows="5" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="form__fieldset">
+        <legend class="form__label">Дополнительно</legend>
+        <label class="form__label"><input type="checkbox" name="sweetener"><span class="">Сахарозаменитель</span></label>
+        <label class="form__label"><input type="checkbox" name="water"><span class="">Питьевая вода</span></label>
+        <label class="form__label"><input type="checkbox" name="milk"><span class="">Молоко</span></label>
+        <label class="form__label"><input type="checkbox" name="vitamins"><span class="">Витамины</span></label>
+      </fieldset>
+      <button class="button" type="submit">Отправить заявку</button>
+      <p class="form__required">* — Обязательные поля</p>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="contacts">
+      <p>приглашаем к сотрудничеству дилеров!</p>
+      <p>ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="map"></div>
+    </div>
+    <a class="logo__footer" href="">
+      <img src="" alt="логотип Кэт энерджи">
+    </a>
+    <div class="social">
+      <a class="social__link" href="#" target="_blank" title="Наш Вконтакте"><span class="visually-hidden">Мы в Вконтакте</span></a>
+      <a class="social__link" href="#" target="_blank" title="Наш Инстаграм"><span class="visually-hidden">Мы в Инстаграм</span></a>
+      <a class="social__link" href="#" target="_blank" title="Наш Фейсбук"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+    </div>
+    <div class="copyright">
+      <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank"></a>
+    </div>
+  </footer>
