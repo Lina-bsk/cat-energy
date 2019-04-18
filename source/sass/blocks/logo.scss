@@ -1,0 +1,20 @@
+.logo {
+  display: block;
+  padding: 0 20px 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.logo__img {
+  width: 191px;
+  height: 38px;
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 203px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,26 @@
+.description__title {
+  margin-bottom: 22px;
+}
+
+.description__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.description__item {
+  font-family: "Arial", sans-serif;
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 26px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    top: 0;
+    left: 0;
+  }
+}
