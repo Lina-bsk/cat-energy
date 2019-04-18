@@ -1,0 +1,22 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.contacts h4 {
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.contacts__address {
+  line-height: 20px;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  width: 50%;
+}

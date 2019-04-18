@@ -1,0 +1,79 @@
+.menu {
+  position: relative;
+  width: 100%;
+}
+
+
+.menu__toggle {
+  position: absolute;
+  top: -54px;
+  right: 0;
+  width: 64px;
+  height: 38px;
+  font-size: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu--closed .menu__toggle::before,
+.menu--closed .menu__toggle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: $black;
+  left: 18px;
+  transition: 0.3s;
+}
+
+.menu--closed .menu__toggle::before {
+  box-shadow: 0 6px 0 0 $black;
+  top: 15px;
+}
+
+.menu--closed .menu__toggle::after {
+  top: 27px;
+}
+
+.menu--opened .menu__toggle::before,
+.menu--opened .menu__toggle::after {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  background-color: $black;
+  left: 18px;
+  top: 20px;
+  transition: 0.3s;
+}
+
+.menu--opened .menu__toggle::before {
+  box-shadow: none;
+  transform: rotate(45deg);
+}
+
+.menu--opened .menu__toggle::after {
+  transform: rotate(-45deg);
+}
+
+.menu--closed .menu__item {
+  display: none;
+}
+
+.menu--opened .menu__item {
+  display: block;
+}
+
+.menu__item {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $black;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e6e6e6;
+}

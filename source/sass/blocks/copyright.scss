@@ -1,0 +1,11 @@
+.copyright {
+  display: flex;
+}
+
+.copyright__link {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: $gray;
+  cursor: pointer;
+}
