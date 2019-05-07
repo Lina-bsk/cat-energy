@@ -1,11 +1,36 @@
+.description {
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 19px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 8px;
+  }
+}
+
 .description__title {
-  margin-bottom: 22px;
+  margin-bottom: 30px;
+  margin-top: -3px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .description__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: section;
+  }
 }
 
 .description__item {
@@ -13,6 +38,7 @@
   position: relative;
   padding-left: 80px;
   margin-bottom: 26px;
+  box-sizing: border-box;
 
   &::before {
     content: "";
@@ -20,7 +46,71 @@
     width: 60px;
     height: 60px;
     background-color: $green;
-    top: 0;
+    top: -2px;
     left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--leaf::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--powder::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--dining::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--clock::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 324px;
+    z-index: 1;
+    padding: 112px 78px 55px 0;
+    margin-bottom: 78px;
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 46px;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      font-size: 281px;
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $light-gray;
+      position: absolute;
+      content: "" counter(section);
+      counter-increment: section;
+      top: 89px;
+      left: 114px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    margin-bottom: 0;
+    padding: 111px 0 55px 0;
+
+    &::before {
+      top: 0;
+    }
+
+    &:last-child,
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
   }
 }

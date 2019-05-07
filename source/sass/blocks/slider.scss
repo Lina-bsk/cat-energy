@@ -1,0 +1,153 @@
+.slider {
+  width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+.slider__bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  padding: 0 39px 0 43px;
+  box-sizing: border-box;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 570px;
+    padding: 0;
+    align-items: center;
+    margin-top: -94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -92px;
+  }
+}
+
+.slider__range-label {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  text-transform: uppercase;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px dotted #bebebe;
+  }
+}
+
+.slider__before {
+  background-image: url("../img/after-mobile@1x.png");
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 240px;
+  margin: 0;
+  background-position: top;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/after-tablet@1x.png"),
+      linear-gradient(to bottom, $white 170px, #eaeaea 170px, #eaeaea 100%);
+    height: 631px;
+    background-position: 58% 0;
+    margin-bottom: 0;
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 649px;
+    background-image: url("../img/after-desktop@1x.png"),
+      linear-gradient(to bottom, $white 190px, #eaeaea 190px, #eaeaea 100%);
+    background-position: -41px 0, 0;
+  }
+}
+
+.slider__after {
+  background: url("../img/before-mobile@1x.png") $light-gray;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 60%;
+  overflow: hidden;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/before-tablet@1x.png"),
+      linear-gradient(to bottom, $white 170px, #f2f2f2 170px, #f2f2f2 100%);
+    background-position: 44px 0, 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/before-desktop@1x.png"),
+      linear-gradient(to bottom, $white 190px, #f2f2f2 190px, #f2f2f2 100%);
+    background-position: -40px 0, 0;
+  }
+}
+
+.slider__rangewrapper {
+  border: 1px solid #cdcdcd;
+  border-radius: 40px;
+  position: relative;
+  width: 84px;
+  height: 14px;
+  background-color: $white;
+  z-index: 6;
+
+  @media (min-width: $tablet-width) {
+    border: 0;
+    width: 428px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #dcdcdc;
+    margin-top: -4px;
+  }
+}
+
+.slider__fill {
+  border: 0;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  z-index: 2;
+  margin-top: -9px;
+}
+
+.slider__thumb {
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 34px;
+    background-color: $white;
+    border: 1px solid #cdcdcd;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    pointer-events: none;
+  }
+}
+
+.slider__customrange {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  opacity: 0.05;
+}

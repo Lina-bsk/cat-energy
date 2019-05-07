@@ -1,0 +1,63 @@
+.present {
+  background-color: $green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  margin: 40px 0 35px;
+  background-size: cover;
+  padding: 0 50px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    margin: 69px 0 76px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    padding: 0 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    margin: 0;
+    padding: 0 40px;
+  }
+}
+
+.present__text {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Arial", sans-serif;
+  color: $white;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding: 187px 0 42px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 61px;
+    background-image: url("../img/icon-gift.svg");
+    top: 22%;
+    left: calc(50% - 28px);
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    padding: 72px 10px 68px 334px;
+
+    &::before {
+      left: 0;
+      top: calc(50% - 36px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 187px 0 0;
+    text-align: center;
+
+    &::before {
+      top: 26%;
+      left: calc(50% - 28px);
+    }
+  }
+}
