@@ -5,9 +5,90 @@
   background-color: $green;
   color: $white;
   cursor: pointer;
-  padding: 10px;
+  padding: 10px 10px;
+  border: 0;
+  box-sizing: border-box;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .button--promo {
-  margin-top: 300px;
+  margin-top: 302px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 15px 29px 17px 25px;
+    margin-top: 48px;
+    margin-left: 89px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 53px 0 0 81px;
+  }
+}
+
+.button--form {
+  width: 100%;
+  max-width: 285px;
+  margin-top: -10px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 60px;
+    margin-top: 0;
+    padding: 14px 6px 15px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 570px;
+    margin-right: 80px;
+    padding: 15px 0;
+  }
+}
+
+.button--product {
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 37px;
+  }
+}
+
+.button--product-add {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
+}
+
+.button--color {
+  background-color: $light-gray;
+  color: $gray;
+
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+    background-color: #ebebeb;
+  }
 }

@@ -1,23 +1,42 @@
 .program {
-  margin: 0;
+  margin: 0 auto;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
 }
 
 .program__item {
   background-color: $light-gray;
   padding: 30px 20px 20px;
   margin-bottom: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 76px 60px 61px 52px;
+    margin: 0 auto 30px;
+    max-width: 708px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+    margin: 0;
+    padding: 76px 52px 60px;
+  }
 }
 
 .program__title {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 29px;
+  padding-left: 71px;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   color: $black;
   text-transform: uppercase;
-  text-align: center;
   position: relative;
 
   &::before {
@@ -27,17 +46,111 @@
     height: 50px;
     border-radius: 50%;
     background-color: $green;
-    top: 0;
-    left: 0;
+    top: -6px;
+    left: 2px;
+  }
+
+  &--weight::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 49px;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
+    background-position: 0 0;
+    top: -8px;
+    left: 10px;
+  }
+
+  &--mass::after {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 32px;
+    background: url("../img/icon-cat-pro.svg") no-repeat;
+    background-position: 0 0;
+    top: 4px;
+    left: -7px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    text-align: left;
+    padding-left: 0;
+    margin-bottom: 25px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 16px;
+      left: 395px;
+    }
+
+    &--weight::after {
+      width: 141px;
+      height: 194px;
+      left: 424px;
+      top: 4px;
+    }
+
+    &--mass::after {
+      width: 268px;
+      height: 113px;
+      top: 59px;
+      left: 360px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 74px;
+    padding-left: 163px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: -29px;
+      left: 0;
+    }
+
+    &--weight::after {
+      width: 71px;
+      height: 97px;
+      top: -35px;
+      left: 14px;
+    }
+
+    &--mass::after {
+      width: 134px;
+      height: 57px;
+      top: -8px;
+      left: -18px;
+    }
   }
 }
 
 .program__description {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   font-family: "Arial", sans-serif;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-right: 222px;
+    margin-bottom: 55px;
+
+    &--mass {
+      padding-right: 255px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+    padding-right: 0;
+  }
 }
 
 .program__link {
@@ -56,7 +169,8 @@
     height: 2px;
     background-color: #3e4242;
     top: 50%;
-    right: 10px;
+    right: 11px;
+    transition: 0.3;
   }
 
   &::before {
@@ -64,9 +178,39 @@
     position: absolute;
     border: 4px solid transparent;
     transform: rotate(45deg);
-    top: 28%;
+    top: 9px;
     right: 7px;
     border-top-color: #3e4242;
     border-right-color: #3e4242;
+    transition: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      width: 26px;
+      right: 2px;
+      transition: 0.3;
+    }
+
+    &::before {
+      right: 0;
+      transition: 0.3;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-right: 53px;
+
+    &::before {
+      top: 41%;
+    }
   }
 }

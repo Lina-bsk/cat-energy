@@ -12,3 +12,24 @@ menuToggle.addEventListener('click', function() {
       menu.classList.remove('menu--opened');
     }
   });
+
+var sliderthumb = document.querySelector('.slider__thumb');
+
+var divisor = document.getElementById("divisor"),
+slider = document.getElementById("slider");
+function moveDivisor() {
+  divisor.style.width = slider.value + "%";
+  sliderthumb.style.left = slider.value + "%";
+}
+
+
+
+
+weight.onblur = function() {
+    if (isNaN(this.value)) { // введено не число
+      // показать ошибку
+      this.classList.add("error");
+    } else {
+      this.classList.remove("error");
+    }
+  };
