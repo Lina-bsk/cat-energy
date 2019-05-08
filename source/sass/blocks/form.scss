@@ -71,6 +71,7 @@
   text-transform: uppercase;
   margin-bottom: 12px;
   width: 100%;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
@@ -114,6 +115,13 @@
   }
 }
 
+.form__icon {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  background-color: $white;
+}
+
 .form__input {
   font-size: 16px;
   line-height: 18px;
@@ -131,8 +139,8 @@
     border-color: #cdcdcd;
   }
 
-  &:focus,
-  &:active {
+  &:active,
+  &:focus {
     border: 2px solid #444444;
     padding: 12px 15px 13px 13px;
   }
@@ -156,12 +164,27 @@
       min-height: 173px;
       margin-left: 0;
     }
+
+    &:active,
+    &:focus {
+      border: 2px solid #444444;
+      padding: 9px 19px;
+    }
   }
+}
+
+.form__input:active + .form__icon,
+.form__input:focus + .form__icon {
+  fill: $green;
 }
 
 .error {
   border: 2px solid $color-danger;
   padding: 12px 15px 13px 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 9px 19px;
+  }
 }
 
 .form__fieldset--radio {
