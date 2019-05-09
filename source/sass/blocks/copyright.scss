@@ -1,11 +1,22 @@
 .copyright {
   display: flex;
   justify-content: space-between;
-  padding: 18px 0 20px;
+  padding: 19px 0 20px;
+  margin-right: -7px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
   }
+}
+
+.copyright:hover .copyright__link-logo .copyright__icon,
+.copyright:focus .copyright__link-logo .copyright__icon {
+  fill: $green;
+}
+
+.copyright:active .copyright__link-logo .copyright__icon,
+.copyright:active .copyright__link {
+  opacity: 0.3;
 }
 
 .copyright__link {

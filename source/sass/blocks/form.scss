@@ -178,13 +178,18 @@
   fill: $green;
 }
 
-.error {
+input:required:invalid,
+.form__error {
   border: 2px solid $color-danger;
   padding: 12px 15px 13px 13px;
 
   @media (min-width: $tablet-width) {
     padding: 9px 19px;
   }
+}
+
+input:required:invalid + .form__icon {
+  fill: $color-danger;
 }
 
 .form__fieldset--radio {

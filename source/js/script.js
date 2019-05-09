@@ -14,22 +14,19 @@ menuToggle.addEventListener('click', function() {
   });
 
 var sliderthumb = document.querySelector('.slider__thumb');
+var divisor = document.getElementById('divisor');
+var slider = document.getElementById('slider');
 
-var divisor = document.getElementById("divisor"),
-slider = document.getElementById("slider");
 function moveDivisor() {
   divisor.style.width = slider.value + "%";
   sliderthumb.style.left = slider.value + "%";
 }
 
-
-
-
+var weight = document.getElementById("weight")
 weight.onblur = function() {
-    if (isNaN(this.value)) { // введено не число
-      // показать ошибку
-      this.classList.add("error");
+    if (isNaN(this.value)) {
+      this.classList.add("form__error");
     } else {
-      this.classList.remove("error");
+      this.classList.remove("form__error");
     }
   };
