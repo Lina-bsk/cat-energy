@@ -28,7 +28,7 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    max-width: 1300px;
+    max-width: 960px;
     margin-bottom: 76px;
 
     &::after {
@@ -38,6 +38,10 @@
     &--check {
       margin-bottom: 67px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1300px;
   }
 }
 
@@ -61,7 +65,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 38px;
-    margin-left: 28px;
+    margin-left: 30px;
   }
 
   @media (min-width: $desktop-width) {

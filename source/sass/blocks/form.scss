@@ -36,7 +36,7 @@
     }
 
     &--check {
-      margin-bottom: 16px;
+      margin-bottom: 13px;
     }
   }
 
@@ -97,7 +97,7 @@
     &--check,
     &--check:last-child {
       width: 287px;
-      margin-bottom: 50px;
+      margin-bottom: 52px;
     }
   }
 
@@ -194,14 +194,14 @@ input:required:invalid + .form__icon {
 
 .form__fieldset--radio {
   border: 1px solid #ededed;
-  padding: 24px 20px 27px;
+  padding: 26px 20px 27px;
   margin: 0 -20px 29px;
   box-sizing: border-box;
   min-width: 320px;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto 75px;
-    padding: 34px 29px 35px 29px;
+    padding: 32px 29px 35px 29px;
   }
 
   @media (min-width: $desktop-width) {
@@ -322,7 +322,7 @@ input:required:invalid + .form__icon {
   text-align: center;
   width: 100%;
   max-width: 200px;
-  margin: 22px auto 32px;
+  margin: 0 auto 32px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
