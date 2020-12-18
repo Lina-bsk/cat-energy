@@ -12,21 +12,3 @@ menuToggle.addEventListener('click', function() {
     menu.classList.remove('menu--opened');
   }
 });
-
-var sliderthumb = document.querySelector('.slider__thumb');
-var divisor = document.getElementById('divisor');
-var slider = document.getElementById('slider');
-
-function moveDivisor() {
-  divisor.style.width = slider.value + "%";
-  sliderthumb.style.left = slider.value + "%";
-}
-
-var weight = document.getElementById("weight")
-weight.onblur = function() {
-  if (isNaN(this.value)) {
-    this.classList.add("form__error");
-  } else {
-    this.classList.remove("form__error");
-  }
-};
